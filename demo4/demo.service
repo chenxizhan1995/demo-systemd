@@ -1,0 +1,9 @@
+[Unit]
+Description=systemd服务单元测试
+After=network.target
+
+[Service]
+User=chen
+Type=oneshot
+MemoryLimit=10M
+ExecStart=/usr/bin/bash /usr/local/bin/demo.sh
