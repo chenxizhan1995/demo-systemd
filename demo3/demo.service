@@ -1,0 +1,11 @@
+[Unit]
+Description=systemd服务单元测试
+After=network.target
+
+[Service]
+User=chen
+Type=oneshot
+Environment="PREFIX=%P"
+Environment="FULL_NAME=%n"
+Environment="SHELL=%s"
+ExecStart=/usr/local/bin/demo.sh
